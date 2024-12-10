@@ -12,7 +12,7 @@ return new class extends Migration
     public function up()
 {
     Schema::table('users', function (Blueprint $table) {
-        $table->string('role')->default('artist');  // O 'hotel' si es un hotel
+        $table->string('role')->default('guest'); // 'guest' es el rol por defecto
     });
 }
 
@@ -21,5 +21,5 @@ public function down()
     Schema::table('users', function (Blueprint $table) {
         $table->dropColumn('role');
     });
-}
+} 
 };
